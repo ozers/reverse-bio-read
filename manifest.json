@@ -1,0 +1,14 @@
+{
+  "name": "Bionic Reader",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Bionic reader that I saw from twitter",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
