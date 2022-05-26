@@ -1,18 +1,9 @@
-// function convert(item, len) {
-//     return item.split(' ').map(i => {
-//         let first = i.slice(0, len)
-//         let last = i.slice(len,)
-//         return `<strong>${first}</strong>${last}`
-//     }).join(' ')
-// }
-
 function bionicRead() {
-
     function convert(item, len) {
         return item.split(' ').map(i => {
             let first = i.slice(0, len)
             let last = i.slice(len,)
-            return `<strong>${first}</strong>${last}`
+            return `${first}<strong>${last}</strong>`
         }).join(' ')
     }
 
@@ -38,7 +29,7 @@ chrome.action.onClicked.addListener((tab) => {
     if (!tab.url.includes("chrome://")) {
         chrome.scripting.executeScript({
             target: {tabId: tab.id},
-            function:  bionicRead
+            function: bionicRead
         });
     }
 });
